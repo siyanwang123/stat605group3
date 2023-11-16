@@ -1,0 +1,13 @@
+# process_files.sub
+
+executable = process_files.sh
+arguments = $(inputfile)
+
+# Specify the input files (assuming files are named file1.txt, file2.txt, etc.)
+inputfiles = file1.txt, file2.txt, file3.txt, file4.txt, file5.txt
+
+# Specify the output files for each job
+outputfiles = processed_file1.txt, processed_file2.txt, processed_file3.txt, processed_file4.txt, processed_file5.txt
+
+# Number of jobs to run in parallel
+queue 5
