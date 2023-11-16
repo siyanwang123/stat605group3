@@ -15,8 +15,8 @@ cat comedies/* histories/* poetry/* tragedies/* > ../all_plays.txt
 cd ..
 split -n l/5 --additional-suffix=.txt all_plays.txt chunk_
 
-mv file_aa.txt file1.txt
-mv file_ae.txt file2.txt
-mv file_ab.txt file3.txt
-mv file_ac.txt file4.txt
-mv file_ad.txt file5.txt
+mv chunk_aa.txt file1.txt
+mv chunk_ae.txt file2.txt
+mv chunk_ab.txt file3.txt
+mv chunk_ac.txt file4.txt
+mv chunk_ad.txt file5.txt
