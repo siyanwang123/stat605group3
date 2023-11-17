@@ -3,7 +3,7 @@
 # Define input and output files
 input_files="processed_file1.txt processed_file2.txt processed_file3.txt processed_file4.txt processed_file5.txt"
 merged_file="merged_sorted_file.txt"
-counts_file="countsOfWords.txt"
+counts_file="for_countsOfWords.txt"
 
 # Concatenate the processed files into one large file
 cat $input_files > $merged_file
