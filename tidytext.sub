@@ -1,4 +1,5 @@
 # process_files.sub
+universe = vanilla
 executable = process_files.sh
 arguments = $(inputfiles)
 
