@@ -3,16 +3,22 @@
 executable = process_files.sh
 arguments = $(inputfiles)
 
+should_transfer_files = YES
 transfer_input_files = $(inputfiles)
-#inputfiles = file1.txt, file2.txt, file3.txt, file4.txt, file5.txt
+when_to_transfer_output = ON_EXIT
 
-# Specify the output files for each job
-outputfiles = processed_file1.txt, processed_file2.txt, processed_file3.txt, processed_file4.txt, processed_file5.txt
+log = job.log
+output = processed_file1.txt, processed_file2.txt, processed_file3.txt, processed_file4.txt, processed_file5.txt
+error = job.err
 
 request_cpus = 1
 request_disk = 20MB
 request_memory = 20MB
 
+#inputfiles = file1.txt, file2.txt, file3.txt, file4.txt, file5.txt
+
+# Specify the output files for each job
+#outputfiles = 
 
 # Number of jobs to run in parallel
 queue inputfiles from file.list
