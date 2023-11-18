@@ -3,8 +3,8 @@
 executable = process_files.sh
 arguments = $(inputfiles)
 
-# Specify the input files (assuming files are named file1.txt, file2.txt, etc.)
-inputfiles = file1.txt, file2.txt, file3.txt, file4.txt, file5.txt
+transfer_input_files = $(inputfiles)
+#inputfiles = file1.txt, file2.txt, file3.txt, file4.txt, file5.txt
 
 # Specify the output files for each job
 outputfiles = processed_file1.txt, processed_file2.txt, processed_file3.txt, processed_file4.txt, processed_file5.txt
@@ -15,4 +15,4 @@ request_memory = 20MB
 
 
 # Number of jobs to run in parallel
-queue 5
+queue inputfiles from file.list
