@@ -1,0 +1,8 @@
+# words.dag
+
+job 1 tidytext .sub
+
+script pre 1 pre.sh
+script post 1 post.sh
+
+parent 1 child 1
