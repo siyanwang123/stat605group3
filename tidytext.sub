@@ -9,5 +9,10 @@ inputfiles = file1.txt, file2.txt, file3.txt, file4.txt, file5.txt
 # Specify the output files for each job
 outputfiles = processed_file1.txt, processed_file2.txt, processed_file3.txt, processed_file4.txt, processed_file5.txt
 
+request_cpus = 1
+request_disk = 20MB
+request_memory = 20MB
+
+
 # Number of jobs to run in parallel
 queue 5
