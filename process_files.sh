@@ -1,12 +1,10 @@
 #!/bin/bash
 
-# Input and output file names
-inputfile=$1
-outputfile="processed_$1"
+if [[ $# -ne 1 ]]; then
+    echo "usage: $0 <file>"
+    exit 0
+fi
 
-# Text processing steps
-tr '[:upper:]' '[:lower:]' < "$inputfile" | \
-sed -e 's/[[:punct:]]//g' | \
-sed -e 's/[[:space:]]/\n/g' | \
-grep -v "^[[:space:]]*$" | \
-sort > "$outputfile"
+file=$1
+
+cat $file | tr '[:upper:]' '[:lower:]' | sed -e 's/[[:punct:]]//g' | sed -e 's/[[:space:]]/\n/g' -e 's/\t/\n/g' | grep -v "^[[:space:]]*$" | sort
