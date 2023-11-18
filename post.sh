@@ -4,6 +4,7 @@
 input_files="processed_file1.txt processed_file2.txt processed_file3.txt processed_file4.txt processed_file5.txt"
 merged_file="merged_sorted_file.txt"
 counts_file="for_countsOfWords.txt"
+final_result="countsOfWords.txt"
 
 # Concatenate the processed files into one large file
 cat $input_files > $merged_file
@@ -29,5 +30,8 @@ sort -r -k 2,2 -n -o $counts_file $counts_file
 
 # Clean up temporary files
 rm temp*.txt
+
+# Convert
+uniq -c $counts_file | awk '{print $1, $2}' | sort -nr > $final_result
 
 echo "Post-processing completed successfully."
