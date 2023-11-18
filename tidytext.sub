@@ -1,7 +1,7 @@
 # process_files.sub
 
 executable = process_files.sh
-arguments = $(inputfile)
+arguments = $(inputfiles)
 
 # Specify the input files (assuming files are named file1.txt, file2.txt, etc.)
 inputfiles = file1.txt, file2.txt, file3.txt, file4.txt, file5.txt
